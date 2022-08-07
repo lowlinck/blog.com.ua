@@ -175,22 +175,47 @@
                 <div class="row">
 
 
-                    <form action="{{route('admin.post.update', $post->id)}}" method="POST" class="w-25">
+                    <form action="{{route('admin.post.update', $post->id)}}" method="POST" enctype="multipart/form-data" >
                         @csrf
                         @method('PATCH')
-                        <div class="form-group">
+                        <div class="form-group w-100">
                                 <label for="exampleInputEmail1">Введите название поста</label>
                                 <input type="text" class="form-control" name="title" value="{{$post->title}}">
-                                <label for="exampleInputEmail1">Введите контент</label>
-                            <textarea type="text"  name="content">{{$post->content}}</textarea>
-                        </div>
-                        <input type="submit" class="btn btn-primary" value="Update">
-                        @error('title')
+                            @error('title')
                             <div class="text-danger">{{$message}}</div>
-                        @enderror
-                        @error('content')
-                        <div class="text-danger">{{$message}}</div>
-                        @enderror
+                            @enderror
+                        </div>
+                        <div class="form-group ">
+                                <label for="exampleInputEmail1">Введите контент</label>
+                            <textarea type="text"  class="form-control" id="summernote" name="editordata" name="content">{{$post->content}}</textarea>
+                            @error('content')
+                            <div class="text-danger">{{$message}}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group  ">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <label class="custom-file-label" >Добавить превью изображение</label>
+                                    <input type="file" class="custom-file-input" name="preview_image" >
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Загрузка</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <label class="custom-file-label" >Добавить главное изображение</label>
+                                    <input type="file" class="custom-file-input" name="main_image"  >
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Загрузка</span>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="submit" class="btn btn-primary"  value="Update">
+
                     </form>
                     </div>
 

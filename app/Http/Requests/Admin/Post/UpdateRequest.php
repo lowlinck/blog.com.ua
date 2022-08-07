@@ -25,7 +25,9 @@ class UpdateRequest extends FormRequest
     {
         return [
             'title'=> 'required|string',
-            'content' =>'required|string'
+            'content'=> 'required|string',
+            'main_image' => 'rerquired|file',
+            'preview_image'=>'rerquired|file'
         ];
     }
 }
