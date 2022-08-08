@@ -186,11 +186,11 @@
                             <!-- /.card-header -->
                             <div class=" card-body table-responsive ">
                                 <table class="  table table-hover text-nowrap">
-                                    <thead>
+                                    <thead class="w-25">
                                     <tr>
                                         <th>ID</th>
                                         <th>Title</th>
-                                        <th>Content</th>
+                                        <th >Content</th>
                                         <th>Date</th>
                                         <th>Show</th>
                                         <th>Action</th>
@@ -201,15 +201,8 @@
                                     @foreach($posts as $post)
                                     <tr>
                                         <td>{{$post->id}}</td>
-                                        <td>
-                                            {{$post->title}}
-                                        </td>
-                                        <td>
-                                                <div class="row">
-                                                    <div class="col-6">{{$post->content}}</div>
-                                                </div>
-
-                                        </td>
+                                        <td>{{$post->title}} </td>
+                                        <td class="w-50">{{$post->content}}</td>
                                         <td>{{$post->created_at}}</td>
                                         <td><a href="{{route('admin.post.show',$post->id)}}"><i class="far fa-eye"></i></a></td>
                                         <td><a href="{{route('admin.post.edit',$post->id)}}"><i class="fas fa-pencil-alt"></i></a></td>

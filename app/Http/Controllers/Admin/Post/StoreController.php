@@ -16,10 +16,11 @@ class StoreController extends Controller
     {
         try {
             $data = $request->validated();
+
             $tagIds = $data['tag_ids'];
             unset($data['tag_ids']);
-            $data['preview_image'] = Storage::put('/image', $data['preview_image']);
-            $data['main_image'] = Storage::put('/image', $data['main_image']);
+            $data['preview_image'] = trim(Storage::put('public/image', $data['preview_image']),'public ');
+            $data['main_image'] = trim(Storage::put('public/image', $data['main_image']),'public ');
             $post = Post::firstOrCreate($data);
             $post->tags()->attach($tagIds);
         }catch (\Exception $exception){
