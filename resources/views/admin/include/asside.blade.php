@@ -18,16 +18,24 @@
             </li>
             <li class="nav-item">
                 <a href="{{route('admin.tag.index')}}" class="nav-link">
-                    <i class="nav-icon fas fa-th-list"></i>
+                    <i class="fa-solid fa-tags"></i>
 
                     <p>Tags</p>
                 </a>
             </li>
             <li class="nav-item">
                 <a href="{{route('admin.post.index')}}" class="nav-link">
-                    <i class="nav-icon fas fa-th-list"></i>
+                    <i class="fa-brands fa-usps"></i>
+
 
                     <p>Posts</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('admin.user.index')}}" class="nav-link">
+                    <i class="fa-solid fa-user"></i>
+
+                    <p>Users</p>
                 </a>
             </li>
         </ul>

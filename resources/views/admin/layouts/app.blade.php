@@ -8,7 +8,10 @@
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
+{{--    <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">--}}
+    <link rel="stylesheet" href="{{asset('assets/fontawesome/css/fontawesome.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/fontawesome/css/brands.css')}}">
+    <link rel="stylesheet" href="{{asset('assets/fontawesome/css/solid.css')}}">
     <!-- Ionicons -->
     <link rel="stylesheet" href="{{asset('plugins/select2/css/select2.min.css')}}">
     <link rel="stylesheet" href="{{asset('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css')}}">

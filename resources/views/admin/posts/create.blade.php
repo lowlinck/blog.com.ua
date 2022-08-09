@@ -222,7 +222,7 @@
                                     </div>
                                 </div>
                                 @error('main_image')
-                                <div class="text-danger">"Это поле необходимо заполнить{{$message}}</div>
+                                <div class="text-danger">{{$message}}</div>
                                 @enderror
                             </div>
                             <div class="form-group">
@@ -242,6 +242,9 @@
                                     @endforeach
                                 </select>
                             </div>
+                            @error('tag_ids[]')
+                            <div class="text-danger">{{$message}}</div>
+                            @enderror
                             <input type="submit" class="btn btn-primary" value="Добавить">
                         </form>
                     </div>

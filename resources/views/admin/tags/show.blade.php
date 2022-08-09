@@ -200,7 +200,7 @@
                                         <td>{{$tag->id}}</td>
                                         <td>{{$tag->title}}</td>
                                         <td>{{$tag->created_at}}</td>
-                                        <td><a href="{{route('admin.tag.show',$tag->id)}}"><i class="far fa-eye"></i></a></td>
+                                        <td><a href="{{route('admin.tag.show',$tag->id)}}"><i class="fa-solid fa-eye"></i></a></td>
                                         <td><a href="{{route('admin.tag.edit',$tag->id)}}"><i class="fas fa-pencil-alt"></i></a></td>
                                         <td>
                                             <form  method="POST" action="{{route('admin.tag.delete',$tag->id)}}">
