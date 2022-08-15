@@ -14,11 +14,8 @@
     {
         public function __invoke(UpdateRequest $request, Post $post)
         {
-                $data = $request->validated();
-              $post = $this->service->update($data, $post);
-
-
-
+            $data = $request->validated();
+            $post = $this->service->update($data, $post);
             return view('admin.posts.show', compact('post'));
         }
     }
